@@ -719,7 +719,7 @@ static struct gendisk *kbdus_device_create_disk_(
 #endif
 
     if (!config->enable_partition_scanning)
-        disk->flags |= GENHD_FL_NO_PART_SCAN;
+        disk->flags |= GENHD_FL_NO_PART;
 
     disk->major       = kbdus_device_major_;
     disk->first_minor = (int)config->minor;
